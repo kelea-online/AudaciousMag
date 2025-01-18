@@ -32,8 +32,8 @@ body {
     grid-template-rows: repeat(3, auto);
 }
 
-.content {
-    max-width: 960px;
+main {
+/*     max-width: 960px; */
     margin-inline: auto;
 }
 
