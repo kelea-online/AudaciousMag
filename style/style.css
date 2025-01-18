@@ -32,6 +32,11 @@ body {
     grid-template-rows: repeat(3, auto);
 }
 
+.content {
+    max-width: 960px;
+    margin-inline: auto;
+}
+
 section {
     padding: 25px 80px;
 }
@@ -87,7 +92,6 @@ img {
 .navbar,
 .home-links,
 .nav-item {
-/*     border: 1px solid black; */
 list-style-type: none;
 
 }
@@ -129,11 +133,6 @@ a:hover:not(.nav-logo) {
     padding-left: 2rem;
 }
 
-.content {
-    margin-inline: auto;
-    max-inline-size: 1500px;
-}
-
 .editor,
 .sunset {
     display: flex;
@@ -150,7 +149,6 @@ a:hover:not(.nav-logo) {
         text-decoration-thickness: 4px;
         text-underline-offset: 8px;
     }
-
 
     h1 {
         font-size: 2.5rem;
