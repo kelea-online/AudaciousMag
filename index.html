@@ -8,23 +8,31 @@
 </head>
 <body>
 
-    <header class="site-header">
-        <a href="index.html" class="nav-logo"><span>A</span>udacious</a>
-
-        <nav class="navbar">
-            <ul class="home-links">
-                <li class="nav-item"><a href="#">Interviews</a></li>
-                <li class="nav-item"><a href="#">Music &#38; Reviews</a></li>
-                <li class="nav-item"><a href="#">Art</a></li>
-                <li class="nav-item"><a href="about_us.html">About Us</a></li>
+  <header class="site-header">
+        <nav>
+            <ul class="sidebar">
+                <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="undefined"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+                <li><a href="#">Interviews</a></li>
+                <li><a href="#">Music &#38; Reviews</a></li>
+                <li><a href="#">Art</a></li>
+                <li><a href="about_us.html">About Us</a></li>
+            </ul>
+            <ul>
+                <li><a href="index.html" class="nav-logo">Audacious</a></li>
+                <li class="hideOnMobile"><a href="#">Interviews</a></li>
+                <li class="hideOnMobile"><a href="#">Music &#38; Reviews</a></li>
+                <li class="hideOnMobile"><a href="#">Art</a></li>
+                <li class="hideOnMobile"><a href="about_us.html">About Us</a></li>
+                <li class="menu-btn" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="undefined"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
             </ul>
         </nav>
-    </header>
+        <script src="hamburger-menu.js"></script>
+  </header>
     
     <main class="content">
         <section class="sunset">
             <div id="about-sunset">
-              <h1>A Sunset Serenade: T!MBO &#38; D3NZL's <span>'Safari's Sunset'</span> Explored</h1>
+              <h1>A Sunset Serenade: T!MBO &#38; D3NZL's '<span>Safari's Sunset</span>' Explored</h1>
             </div>
             <img src="media/Safari's Sunset.jpg" alt="Safari's Sunset album art cover">
           </section>
