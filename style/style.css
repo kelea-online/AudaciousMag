@@ -7,6 +7,7 @@
     --clr-accent: #008000;
     --clr-bg: hsl(0, 0%, 97%);
 
+    --fw-200: 200;
     --fw-300: 300;
     --fw-400: 400;
     --fw-500: 500;
@@ -28,10 +29,6 @@ body {
     background-color: var(--clr-bg);
     overflow-x: hidden;
     min-height: 100vh;
-
-
-    display: grid;
-    grid-template-rows: repeat(3, auto);
 }
 
 nav {
@@ -91,13 +88,33 @@ nav li:first-child {
     justify-content: flex-start;
 }
 
-main {
-    width: 100%;
-    margin-inline: auto;
+.page-container {
+    max-width: 60rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
-section {
-    padding: 25px 80px;
+.grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0px, 1fr));
+    column-gap: 1.5rem;
+}
+
+.col-span {
+    grid-column: 1 / -1;
+}
+
+.margin {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.page-content {
+    padding: 1rem;
 }
 
 .sunset {
@@ -112,41 +129,48 @@ section span {
     text-underline-offset: 3px;
 }
 
-#about-section {
-    padding-top: 1rem;
-}
-
-h1 {
-    font-size: 2rem;
-}
-
-h2 {
-    font-size: 1.25rem;
-    font-weight: var(--fw-400);
-}
-
-p {
-    line-height: 2;
-    margin-top: 1rem;
-    max-width: 65ch;
-    font-weight: var(--fw-300);
-}
-
-img {
-    height: 500px;
-    max-width: 100%;
-}
-
-.editor,
-.sunset {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+.about_us {
+    display: flex;
     align-items: center;
     justify-items: center;
 }
 
+h1 {
+    font-size: clamp(1.5rem, 2.5vw, 3rem);
+}
+
+h2 {
+    font-size: clamp(1.25rem, 2vw, 2.5rem);
+    font-weight: var(--fw-400);
+}
+
+p {
+    font-size: clamp(1rem, 1.5vw, 1.25rem);
+    margin-top: 1rem;
+    font-weight: var(--fw-300);
+}
+
+img {
+    height: auto;
+    max-width: 400px;
+}
+
 .menu-btn {
     display: none;
+}
+
+@media (min-width: 967px) {
+    .page-container {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+@media (min-width: 640px) {
+    .page-container {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
 }
 
 @media(max-width: 800px) {
@@ -169,24 +193,20 @@ img {
         text-decoration: underline;
         text-decoration-style: wavy;
         text-decoration-color: var(--clr-accent);
-        text-decoration-thickness: 4px;
-        text-underline-offset: 8px;
-    }
-
-    h1 {
-        font-size: 2.5rem;
+        text-decoration-thickness: 2px;
+        text-underline-offset: 1px;
     }
 
     h2 {
-        font-size: 1.125rem;
+   
         font-weight: var(--fw-400);
     }
 
     p {
-        line-height: 2;
+        line-height: 1.6em;
         margin-top: 0.9375rem;
         max-width: 65ch;
-        font-weight: var(--fw-300);
+        font-weight: var(--fw-200);
     }
 
     img {
@@ -194,18 +214,14 @@ img {
         max-width: 100%;
     }
 
-    .editor,
-    .sunset {
+    .about_us {
+        padding-top: 1rem;
         display: flex;
         flex-direction: column-reverse;
         gap: 1em;
         align-items: center;
         justify-items: center;
     }
-}
-
-footer {
-    background-color: hsl(0, 100%, 10%);
 }
 
 
