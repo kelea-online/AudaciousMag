@@ -35,6 +35,10 @@ nav {
     background-color: white;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
     border-bottom: 0.5px solid var(--clr-accent);
+    margin-left: 0 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
 }
 
 .nav-logo {
@@ -56,7 +60,7 @@ nav li {
 
 nav a {
     height: 100%;
-    padding: 0 25px;
+    margin: 0 30px;
     text-decoration: none;
     display: flex;
     align-items: center;
@@ -89,7 +93,7 @@ nav li:first-child {
 }
 
 .page-container {
-    max-width: 60rem;
+    max-width: 62.5rem;
     margin-left: auto;
     margin-right: auto;
     padding-top: 1rem;
@@ -117,10 +121,6 @@ nav li:first-child {
     padding: 1rem;
 }
 
-.sunset {
-    margin-top: 2rem;
-}
-
 section span {
     text-decoration: underline;
     text-decoration-style: wavy;
@@ -132,11 +132,20 @@ section span {
 .about_us {
     display: flex;
     align-items: center;
-    justify-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.home_content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
 }
 
 h1 {
-    font-size: clamp(1.5rem, 2.5vw, 3rem);
+    font-size: clamp(1.563rem, 2.5vw, 3.125rem);
 }
 
 h2 {
@@ -144,8 +153,12 @@ h2 {
     font-weight: var(--fw-400);
 }
 
+.home_heading {
+    font-size: (1.75rem, 2vw, 2.8rem);
+}
+
 p {
-    font-size: clamp(1rem, 1.5vw, 1.25rem);
+    font-size: clamp(0.938rem, 1.5vw, 1rem);
     margin-top: 1rem;
     font-weight: var(--fw-300);
 }
@@ -155,8 +168,37 @@ img {
     max-width: 400px;
 }
 
+.sunset {
+    height: auto;
+    max-width: 500px;
+}
+
+.home_content a {
+    text-decoration: none;
+    color: var(--clr-text);
+    font-weight: var(--fw-600);
+}
+
 .menu-btn {
     display: none;
+}
+
+.date_info ul {
+    width: 100%;
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.date_info a {
+    height: 100%;
+    margin: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: var(--clr-text);
+    font-weight: var(--fw-400);
 }
 
 @media (min-width: 967px) {
@@ -205,21 +247,25 @@ img {
     p {
         line-height: 1.6em;
         margin-top: 0.9375rem;
-        max-width: 65ch;
+        max-width: 70ch;
         font-weight: var(--fw-200);
     }
 
     img {
-        height: 400px;
+        height: auto;
         max-width: 100%;
     }
 
-    .about_us {
-        padding-top: 1rem;
+    .sunset {
+        height: auto;
+        max-width: 100%;
+    }
+
+    .about_us,
+    .home_content {
         display: flex;
         flex-direction: column-reverse;
         gap: 1em;
-        align-items: center;
         justify-items: center;
     }
 }
